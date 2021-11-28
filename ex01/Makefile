@@ -6,7 +6,7 @@
 #    By: ioleinik <ioleinik@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/11 22:31:17 by ioleinik          #+#    #+#              #
-#    Updated: 2021/11/28 14:01:48 by ioleinik         ###   ########.fr        #
+#    Updated: 2021/11/28 15:13:43 by ioleinik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,11 +15,11 @@ CXXFLAGS	= -Wall -Wextra -Werror -I.
 
 RM			= rm -f
 
-NAME		= convert
+NAME		= serialize
 
-SRC			= main.cpp Scalar.cpp
+SRC			= main.cpp
 
-INC			= Scalar.hpp
+INC			= Data.hpp
 
 OBJ			= ${SRC:.cpp=.o}
 
@@ -27,7 +27,7 @@ all:		$(NAME)
 
 $(NAME):	$(OBJ)
 			$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
-			@echo "[./convert <LITERAL TO CONVERT>] to run"
+			@echo "[./serialize] to run"
 
 clean:
 			$(RM) $(OBJ)

@@ -6,7 +6,7 @@
 #    By: ioleinik <ioleinik@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/11 22:31:17 by ioleinik          #+#    #+#              #
-#    Updated: 2021/11/28 14:01:48 by ioleinik         ###   ########.fr        #
+#    Updated: 2021/11/28 16:09:55 by ioleinik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,11 +15,11 @@ CXXFLAGS	= -Wall -Wextra -Werror -I.
 
 RM			= rm -f
 
-NAME		= convert
+NAME		= ident
 
-SRC			= main.cpp Scalar.cpp
+SRC			= main.cpp Base.cpp
 
-INC			= Scalar.hpp
+INC			= Base.hpp A.hpp B.hpp C.hpp
 
 OBJ			= ${SRC:.cpp=.o}
 
@@ -27,7 +27,7 @@ all:		$(NAME)
 
 $(NAME):	$(OBJ)
 			$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
-			@echo "[./convert <LITERAL TO CONVERT>] to run"
+			@echo "[./ident] to run"
 
 clean:
 			$(RM) $(OBJ)
